@@ -173,5 +173,35 @@ public class MybatisController {
 	 * 				
 	 * 			2-2) 컨트롤러 메소드에서 crudRegister 부분 수정
 	 * 				- 전달받은 시퀀스가 boardNo에 들어 있기 때문에, 등록 후 전달받은 boardNo로 상세보기 화면으로 접근하도록 합시다!
-	 */			
+	 * 
+	 * 6. 일대다 관계 테이블 매핑 
+	 * - 마이바티스 기능을 활용하여 매핑 파일을 적절하게 정의하면 일대다 관계 테이블 매핑을 쉽게 처리할 수 있다. 
+	 * 	
+	 * 		ex) Member 클래스 안에 Address 클래스가 있다 
+	 * 			Member 
+	 * 				- Address
+	 * 					> location			
+	 * 					> postCode 
+	 * 		Member 클래스 안에 List<Address> 컬렉션이 있다. 
+	 * 		Member 
+	 * 			- List
+	 * 				- Address 
+	 * 				- Address 
+	 * 				..... 
+	 * 			이런 경우에 브라우저에서 입력받아 넘기는 데이터가 서버로 전송 되고, 전송된 계층 데이터들이 내가 처리해야할 
+ * 				데이터 매핑 공간에 하나하나씩 잘 셋팅되어야 한다. 
+ * 
+	 * 		1) 게시판 구현 설명 
+	 * 				
+ * 				- 회원 등록 화면 컨트롤러 만들기 (member/CrudMemberController)
+ * 				- 회원 등록 화면 컨트롤러 메소드 만들기(crudMemberRegisterForm:get) 
+ * 				- 회원 등록 화면 만들기(crud/member/register.jsp)  
+ * 				- 회원 등록 기능 컨트롤러 메소드 만들기 (crudMemberRegister:post)
+ * 				- 회원 등록 기능 인터페이스 메소드 만들기
+ * 				- 회원 등록 기능 클래스 메소드 만들기 
+ * 				- 회원 등록 기능 Mapper 인터페이스 메소드 만들기 
+ * 				- 회원 등록 기능 Mapper xml 쿼리 만들기    
+ * 				
+ * 
+	 */		
 }

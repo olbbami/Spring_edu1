@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.hdcd.mapper.MemberMapper">
+	
+	<insert id="create" useGeneratedKeys="true">
+		<selectKey keyProperty="userNo" order="BEFORE" resultType="int">
+			select seq_member.nextval from dual 
+		</selectKey>
+		insert into member(
+			user_no, user_id, user_pw, user_name, reg_date, upd_date
+		) values(
+			#{userNo}, #{userId}, #{userPw}, #{userName}, sysdate, sysdate 
+		)
+	</insert>
+	
+</mapper>
