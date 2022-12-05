@@ -13,4 +13,9 @@
 		)
 	</insert>
 	
+	<insert id="createAuth" parameterType="memberAuth">
+		insert into member_auth(
+			user_no, auth 
+		)values (#{userNo}, #{auth})	
+	</insert>
 </mapper>

@@ -14,5 +14,7 @@
 
 	<typeAliases>
 		<typeAlias type="org.hdcd.vo.Board" alias="board"/>
+		<typeAlias type="org.hdcd.vo.MemberVO" alias="memberVO"/>
+		<typeAlias type="org.hdcd.vo.MemberAuth" alias="memberAuth"/>
 	</typeAliases>
 </configuration>
